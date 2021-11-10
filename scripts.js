@@ -116,9 +116,16 @@
                 to: to,
                 text: messageBox.value,
                 type: type
+            })
+            .then(response => {
+                getMessages();
+                messageBox.value = '';
+            }).catch(error => {
+                if(error.response.status === 400)
+                {
+                    onExit();
+                }
             });
-            getMessages();
-            messageBox.value = '';
         }
 
         const loadPage = () =>
