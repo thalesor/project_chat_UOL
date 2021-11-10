@@ -87,10 +87,16 @@
         {
             axios.post('https://mock-api.driven.com.br/api/v4/uol/participants', {
                 name: `${userName}`
-            }).then(() => {
+            }).then(response => {
+                console.log(response);
                 localStorage.setItem("isLoggedIn", true);
                 localStorage.setItem("userName", userName);
                 loadPage();
+            }).catch(error => {
+                if(error.response.status === 400)
+                alert("Escolha outro nome, esse aí já está em uso!!!");
+                else
+                alert(`Erro desconhecido: ${error.response.status}`);
             });
         }
 
