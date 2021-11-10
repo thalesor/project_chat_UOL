@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="reset.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
@@ -13,35 +12,23 @@
     <title></title>
 </head>
 <body>
-    <header>
-        <img src="imagens/uol.png"  alt="">
-        <a href="#"><img src="imagens/people.png" alt=""></a>
-    </header>
-    <div class="mensagens-container">
-        <div class="mensagem sala">
-            <span>(09:21:45)</span>
-            <p>&nbsp;<strong>João</strong>  entra na sala...</p>
+    <main>
+        
+    </main>
+    <div class="modal">
+       <div onClick="toggleSideBar()" class="contacts-container">
+           <div class="contacts-container-header">
+               <strong>Escolha um contato para enviar mensagem:</strong>
+           </div>
+           <div class="contacts-container-main">
+            <ul>
+                
+            </ul>
         </div>
-        <div class="mensagem">
-            <span>(09:21:45)</span>
-            <p>&nbsp;<strong>João</strong>  entra na sala...</p>
-        </div>
-        <div class="mensagem">
-            <span>(09:21:45)</span>
-            <p>&nbsp;<strong>João</strong>  entra na sala...</p>
-        </div>
-        <div class="mensagem privado">
-            <span>(09:21:45)</span>
-            <p>&nbsp;<strong>João</strong>  Reservadamente para <strong>Maria</strong>: Oi gatinha, quer tc?</p>
-        </div>
-        <div class="mensagem sala">
-            <span>(09:21:45)</span>
-            <p>&nbsp;<strong>Maria</strong>  sai da sala...</p>
-        </div>
+       </div>     
     </div>
-    <footer> 
-        <textarea placeholder="Escreva aqui..." type="text"></textarea>
-        <a href="#"><img src="imagens/send.png" alt=""></a>
-    </footer>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="scripts.js"></script>
+    </script>
 </body>
 </html>
