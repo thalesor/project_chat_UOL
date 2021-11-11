@@ -95,8 +95,6 @@
             }).catch(error => {
                 if(error.response.status === 400)
                 alert("Escolha outro nome, esse aí já está em uso!!!");
-                else
-                alert(`Erro desconhecido: ${error.response.status}`);
             });
         }
 
@@ -146,7 +144,7 @@
                 getMessages();
                 getParticipants();
                 setInterval(getMessages, 3000);
-                setInterval(getParticipants, 10000);
+               // setInterval(getParticipants, 10000);
                 setInterval(() => {
                     axios.post('https://mock-api.driven.com.br/api/v4/uol/status', {
                 name: `${localStorage.userName}`
@@ -155,7 +153,6 @@
                      console.log("ta atualizando");
                  })
                 }, 5000);
-                
             }
         }
 
