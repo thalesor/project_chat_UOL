@@ -6,11 +6,17 @@
     color: #000000;
 }
 
+body
+{
+    width: 100vw;
+    height: 100vh;
+}
+
 main
 {
     background-color: #FFFFFF;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
 }
 
 .signin-container
@@ -19,7 +25,6 @@ main
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
     align-items: center;
 }
 
@@ -27,6 +32,7 @@ main
 {
     width: 130px;
     height: 92px;
+    margin-top: 72px;
 }
 
 .signin-container input
@@ -39,6 +45,7 @@ main
     outline: 0;
     box-sizing: border-box;
     border-radius: 4px;
+    margin-top: 94px;
 }
 
 .signin-container input[type=button]
@@ -49,6 +56,7 @@ main
     outline: 0;
     background: #E7E7E7;
     border-radius: 9px;
+    margin-top: 15px;
 }
 
 header
@@ -87,19 +95,30 @@ header a img
     flex-direction: column;
     gap: 4px;
     overflow-y: scroll;
-    overflow-x: hidden;
     padding-block: 100px;
 }
 
 .mensagem
 {
     padding: 15px 8px;
-    display: flex;
     background-color: #FFFFFF;
     font-family: Roboto;
     font-style: normal;
     font-size: 14px;
     line-height: 16px;
+}
+
+.mensagem-header
+{
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 5px;
+    word-wrap: none;
+}
+
+.mensagem-content
+{
+    word-wrap: break-word;
 }
 
 .status
@@ -162,7 +181,7 @@ footer textarea::placeholder
     transition: visibility 0s, opacity 0.5s linear;
 }
 
-.modal .contacts-container
+.contacts-container
 {
     background-color: #FFFFFF;
     width: 0px;
@@ -173,7 +192,8 @@ footer textarea::placeholder
     flex-direction: column;
 }
 
-.contacts-container .contacts-container-header
+
+.contacts-container-header
 {
     padding-inline: 46px;
     padding-block: 18px;
@@ -185,12 +205,13 @@ footer textarea::placeholder
     text-align: center;
 }
 
-.contacts-container .contacts-container-main
+.contacts-container-main
 {
     margin-top: 4px;
+    overflow-y: auto;
 }
 
-.contacts-container .contacts-container-main ul
+.contacts-container ul
 {
    display: flex;
    flex-direction: column;
@@ -203,26 +224,34 @@ footer textarea::placeholder
     cursor: pointer;
 }
 
-.contacts-container .contacts-container-main ul li
+.contacts-container li
 {
    display: flex;
    align-items: center;
    gap: 8px;
-   height: 36px;
+   MIN-height: 36px;
 }
 
-.contacts-container .contacts-container-main ul > .selected
+.contacts-container .check 
 {
-   background-color: #FFDEDE;
+    justify-self: flex-end;
+    margin-left: auto;
 }
 
-.contacts-container .contacts-container-main ul li img
+.contacts-container-footer .check
 {
-   width: 24px;
-   height: 17px;
+    justify-self: flex-end;
+    margin-left: auto;
+    visibility: hidden;
 }
 
-.contacts-container .contacts-container-main ul li img .person
+.contacts-container-footer .selected .check
+{
+    
+    visibility: visible;
+}
+
+.contacts-container-main ul li img .person
 {
    width: 20px;
    height: 20px;
